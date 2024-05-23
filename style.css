@@ -1,0 +1,66 @@
+* {
+    font-family: "Lato", sans-serif;
+}
+header {
+    background-image: linear-gradient(270deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.navbar-brand {
+    color: whitesmoke;
+    font-style: oblique;
+    text-shadow: 3px 3px 1px #105cd4;
+}
+.text-p {
+    font-size: 20px;
+}
+.dropdown-menu {
+    background-color: #105cd4;
+}
+.dropdown-menu li a{
+    color: whitesmoke;
+}
+.pawsclime {
+    color: whitesmoke;
+    text-shadow: 5px 5px 1px #105cd4;
+}
+hr {
+    width: 50%;
+    margin: auto;
+}
+#weather-app {
+    background-image: linear-gradient(270deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.item-community img {
+    border: 8px white solid;
+    filter: contrast(0.8);
+    padding: 8px;
+    width: 250;
+    height: 250;
+}
+.item-community:hover{
+    background-color: #71a1f0;
+    border-radius: 0 0 50px 50px;
+    color: white;
+}
+.jumbutrons{
+    background: url("icons/community.jpg") 50%/ cover;
+}
+footer {
+    border-radius: 50px 50px 0 0;
+    background-image: linear-gradient(270deg, #a1c4fd 0%, #c2e9fb 100%);
+    bottom: 0;
+}
+.offcanvas-dashboard {
+    background-image: linear-gradient(270deg, #a1c4fd 0%, #c2e9fb 100%);
+    line-height: 10px;
+    border-radius: 0 0 50px 50px;
+}
+.dashboard img {
+    margin-top: 10px;
+    border: 4px white solid;
+    padding: 5px;
+}
+.dashboard-username {
+    color: whitesmoke;
+    font-weight: bolder;
+    text-shadow: 3px 3px 1px #105cd4;
+}

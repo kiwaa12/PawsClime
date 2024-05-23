@@ -1,0 +1,385 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>PawsClime</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand fw-bolder fst-italic" aria-current="page"  href="#">PawsClime</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div>
+            <div class="nav-item d-flex align-items-center">
+              <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasExample"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg> Dashboard</a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#weather">Weather & Temperature Tracking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pet-wellness">Pet Wellness</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#community">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#FAQs">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="container">
+            <div class="row align-items-center justify-content-start">
+                <div class="col-12 col-lg-8 ">
+                    <h1 class="display-5 fw-bold">Introducing <span class="pawsclime display-2 fw-bolder">PawsClime</span></h1>
+                    <p class="text-p">Ensuring Your Pet's Well-being in Any Weather. Monitor temperature, receive expert advice, and keep your pet healthy and happy with our intuitive app.</p>
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Get Started
+                      </button>
+                      <form class="dropdown-menu p-4 text-white ">
+                        <div class="mb-3">
+                          <label for="DropdownFormEmail2" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                          <label for="DropdownFormPassword2" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                            <label class="form-check-label" for="dropdownCheck2">
+                              Remember me
+                            </label>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                          <button type="submit" class="btn btn-primary">Sign in</button>
+                          <a href="#" class="text-decoration-none text-white">No Account Yet?</a>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+                <div class="row col-12 col-lg-4">
+                  <img class="img-fluid" src="icons/cat stand.png" alt="dog">
+                </div>
+            </div>
+        </div>
+      </section>
+    </header>
+
+<!-- Weather Tracking Area -->
+    <section>
+      <div id="weather" class="container marketing py-5">
+        <div class="wellness-title d-flex flex-column justify-content-center align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+            <path d="M11.473 9a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 14h8.5a2.5 2.5 0 1 0-.027-5"/>
+            <path d="M14.544 9.772a3.5 3.5 0 0 0-2.225-1.676 5.5 5.5 0 0 0-6.337-4.002 4.002 4.002 0 0 1 7.392.91 2.5 2.5 0 0 1 1.17 4.769z"/>
+          </svg>
+          <h1 class="display-5 fw-bold">Weather Tracking</h1>
+        </div>
+        <div class="row">
+          <div class="h-100 col-md-6 p-5 rounded-3">
+              <div id="weather-app" class="text-white rounded-5">
+                <div class="container">
+                <div id="weather-info" class="text-white"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 text- rounded-3">
+              <div class="searchbar justify-content-start">
+                <form id="weather-form" class="d-flex align-items-center">
+                  <input class="form-control me-2" id="city" type="search" placeholder="Search Location..." aria-label="Search">
+                  <button class="btn btn-outline-primary " type="submit">Search</button>
+                </form>
+              </div>
+              <h2 class="fw-bold ">How Weather Conditions Affect Pets?</h2>
+              <p>Weather significantly impacts pets. Hot weather above 29°C can cause heatstroke, dehydration, burns, and respiratory issues. Cold weather below 7°C risks hypothermia, frostbite, joint pain, and requires adequate shelter. High humidity can lead to heat stress and skin infections. Rain and snow can irritate paws and cause skin issues from prolonged dampness. Wind can carry debris that may injure pets and cause anxiety. Understanding these effects helps pet owners keep their pets comfortable and healthy in all conditions.</p>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-title">
+                  <h1 class="fw-bolder">Temperature Tracking <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-thermometer-half" viewBox="0 0 16 16"> <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/> <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/></svg></h1>
+                </div>
+                <div class="accordion-item bg-primary text-white">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <h4 class="pet-name fw-bold text-primary">Tips & Warnings</h4>
+                    </button>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <h1 class="display-5 fw-bold"><span class="temperature-pet"></span>°C</h1>
+                      <p>(Please Input Location at Weather Tracking first to see present Temperature)</p>
+                      <h7 class="pet-warning"></h7>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <hr>
+
+<!-- Pet Wellness Area -->
+    <section>
+      <div id="pet-wellness">
+        <section>
+          <div class="container marketing pt-3 pb-5">
+            <div class="wellness-title d-flex flex-column justify-content-center align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-3 2v.634l.549-.317a.5.5 0 1 1 .5.866L7 7l.549.317a.5.5 0 1 1-.5.866L6.5 7.866V8.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L5 7l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V5.5a.5.5 0 1 1 1 0m-2 4.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1m0 2h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1"/>
+              </svg>
+              <h1 class="display-5 fw-bold">Pet Wellness</h1>
+            </div>
+            <div class="row d-flex align-items-md-stretch justify-content-between">
+              <div class="item-community col-lg-3 text-center">
+                <a href="#"><img src="icons/dogfood.jpg" class="image-community rounded-circle my-3 p-2" width="200" height="200"></a>
+                <h1>Nutrition</h1>
+                <p class="text-center">Discuss and share tips about pet nutrition, diet plans, and healthy eating habits to keep your pet fit and energetic.</p>
+                <p><a class="btn btn-primary px-5 py-3d inline-block" href="#">Learn More</a></p>
+              </div>
+              <div class="item-community col-lg-3 text-center">
+                <a href="#"><img src="icons/dog-catch.jpg" class="image-community rounded-circle my-3 p-2" width="200" height="200"></a>
+                <h1>Exercise</h1>
+                <p class="text-center ">Explore various exercise routines, activities, and playtime ideas to ensure your pet stays active and healthy.</p>
+                <p><a class="btn btn-primary px-5 py-3d inline-block" href="#">Learn More</a></p>
+              </div>
+              <div class="item-community col-lg-3 text-center">
+                <a href="#"><img src="icons/cat-groom.jpg" class="image-community rounded-circle my-3 p-2 " width="200" height="200"></a>    
+                <h1>Grooming</h1>
+                <p class="text-center">Share advice on grooming techniques, products, and routines to keep your pet looking and feeling their best.</p>
+                <p><a class="btn btn-primary px-5 py-3d inline-block" href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section> <hr>
+
+<!-- Community Area-->
+    <section id="community">
+      <div class="container marketing">
+        <div class="container my-5">
+          <div class="jumbutrons p-5 text-center text-white rounded-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+            </svg>
+            <h1 class="display-5 fw-bold">Community</h1>
+            <p class="col-lg-6 mx-auto mb-4">
+              Join the PawsClime Community Forum to connect with pet owners and experts. Share tips, ask questions, and discuss pet care and weather impacts. Explore threads on nutrition, exercise, grooming, and seasonal care. Get advice, share experiences, and support your pet's well-being in our vibrant community.
+            </p>
+            <button class="btn btn-primary px-5 mb-5" type="button">
+              View Threads
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- FAQs --> 
+    <footer>
+      <section id="FAQs" class="py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Frequently Asked Questions<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+  </svg>
+          </svg></h1>
+          <p class="fw-bold">Discover more about Paws Clime, weather impacts on pets, app features, nutrition tips, and exercise recommendations.</p>
+        </div>
+        <div class="container">
+          <div class="questions">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is Paws Clime?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Paws Clime is an app that monitors weather and provides personalized insights to keep your pet healthy and happy.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How does weather affect my pet?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Weather conditions can impact your pet's health, including risks of heatstroke, hypothermia, and skin issues.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What features does the app offer?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>The app provides weather monitoring, health insights, and expert advice tailored to your pet's needs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    How can I ensure my pet's nutrition is balanced?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Our app offers tips on balanced diets, portion sizes, and healthy food choices to ensure optimal nutrition for your pet.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                    What are the best exercises for my pet?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Paws Clime provides expert tips on exercise routines tailored to your pet’s breed, age, and health to keep them fit and happy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><hr>
+<!-- Faqs and Footer -->
+      <footer class="container">
+        <section class="pt-2">
+          <div class="row">
+            <div class="d-flex justify-content-between pt-4">
+              <form>
+                <h3>Donate or Support PawsClime</h3>
+                <p>Your contributions help us provide essential care, shelter, and medical treatment for stray pets. Together, we can give them a second chance at a happy and healthy life. Every donation counts.</p>
+                <div class="d-flex justify-content-between ">
+                  <div class="d-flex flex-column flex-sm-row w-50 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Support</button>
+                  </div>
+                  <div class="donation-links d-flex align-items-center gap-3 mx-auto">
+                    <a href="#" class="text-decoration-none text-white">Donate Us Here: <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-paypal" viewBox="0 0 16 16">
+                      <path d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.35.35 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91q.57-.403.993-1.005a4.94 4.94 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.7 2.7 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.7.7 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016q.326.186.548.438c.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.87.87 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.35.35 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32z"/>
+                    </svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-credit-card" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                      <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                    </svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-alipay" viewBox="0 0 16 16">
+                      <path d="M2.541 0H13.5a2.55 2.55 0 0 1 2.54 2.563v8.297c-.006 0-.531-.046-2.978-.813-.412-.14-.916-.327-1.479-.536q-.456-.17-.957-.353a13 13 0 0 0 1.325-3.373H8.822V4.649h3.831v-.634h-3.83V2.121H7.26c-.274 0-.274.273-.274.273v1.621H3.11v.634h3.875v1.136h-3.2v.634H9.99c-.227.789-.532 1.53-.894 2.202-2.013-.67-4.161-1.212-5.51-.878-.864.214-1.42.597-1.746.998-1.499 1.84-.424 4.633 2.741 4.633 1.872 0 3.675-1.053 5.072-2.787 2.08 1.008 6.37 2.738 6.387 2.745v.105A2.55 2.55 0 0 1 13.5 16H2.541A2.55 2.55 0 0 1 0 13.437V2.563A2.55 2.55 0 0 1 2.541 0"/>
+                      <path d="M2.309 9.27c-1.22 1.073-.49 3.034 1.978 3.034 1.434 0 2.868-.925 3.994-2.406-1.602-.789-2.959-1.353-4.425-1.207-.397.04-1.14.217-1.547.58Z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+            <p>© 2024 PawsClime, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex gap-3">
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg></a></li>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-tiktok" viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+              </svg></a></li>
+              <li><a href="#"></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+
+<!-- For offcanvass -->
+    <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-dashboard bg-primary">
+        <div class="offcanvas-header">
+          <a class="navbar-brand fw-bolder fst-italic" aria-current="page"  href="#">PawsClime</a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="dashboard text-center d-flex mx-auto flex-column">
+          <a href="#"><img src="icons/dogfood.jpg" class="rounded-circle" width="150" height="150"></a>
+          <h1 class="dashboard-username">Gerry Tapuyo</h1>
+          <p class="text-primary">Owner</p>
+        </div>
+      </div>
+      <div class="offcanvas-body">
+          <div class="feeding-tracker">
+            <h1 class="feeding-tracker-title fw-bold text-white">Feeding Tracker</h1>
+            <div class="feeding-tracker-body">
+              <div class="feeding-tracker">
+                <form id="feeding-form" class="mb-4">
+                  <div class="mb-3">
+                    <label for="petName" class="form-label">Pet Name</label>
+                    <input type="text" class="form-control" id="petName" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="foodType" class="form-label">Type of Food</label>
+                    <input type="text" class="form-control" id="foodType" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="foodAmount" class="form-label">Amount of Food</label>
+                    <input type="number" class="form-control" id="foodAmount" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="feedingTime" class="form-label">Feeding Time</label>
+                    <input type="time" class="form-control" id="feedingTime" required>
+                  </div>
+                  <button type="submit" class="btn btn-success">Add Feeding</button>
+                </form>
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Pet Name</th>
+                      <th>Type of Food</th>
+                      <th>Amount of Food</th>
+                      <th>Feeding Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="feeding-records">
+                  </tbody>
+                </table>
+                <button id="clear-records" class="btn btn-warning mb-4">Clear Records</button>
+              </div>
+            </div>
+        </div>      
+      <div class="buttons-profile d-grid mt-2">
+        <a class="text-white text-decoration-none" href="#">Want To Know More About Pet Wellness?</a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script for weather.js"></script>
+</body>
+</html>
